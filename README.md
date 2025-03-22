@@ -10,4 +10,8 @@ packages
 -  ui
 -  tsconfig + eslint (default)
 
+services
+- postgres (docker)
+- minio (docker)
+
 error :: in prisma db something in generted/ folder __dirname error
