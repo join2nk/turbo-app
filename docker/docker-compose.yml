@@ -1,0 +1,16 @@
+services:
+  xp-db:
+    image: postgres:latest
+    container_name: xp-db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: username # The PostgreSQL user (useful to connect to the database)
+      POSTGRES_PASSWORD: password # The PostgreSQL password (useful to connect to the database)
+      POSTGRES_DB: xp-db # The PostgreSQL default database (automatically created at first launch)
+    volumes:
+      - ./data:/var/lib/postgresql/data # The PostgreSQL data directory (useful to persist the database)
+
+volumes:
+  xp-db:
+    driver: local
